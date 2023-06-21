@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { Typography, Input, Button, List, message,Checkbox } from 'antd';
+import { Typography, Input, Button, List, message, Checkbox } from 'antd';
 import { DeleteOutlined } from '@ant-design/icons';
+
 import 'antd/dist/reset.css';
 
-
 const API_BASE_URL = 'http://localhost:3000/tasks';
+
 function App() {
   const [tasks, setTasks] = useState([]);
   const [title, setTitle] = useState('');
@@ -64,56 +65,58 @@ function App() {
   };
 
   return (
-    <div style={{ maxWidth: '600px', margin: '0 auto', padding: '20px' }}>
-      <Typography.Title level={2}>Task Manager</Typography.Title>
-      <Input
-        placeholder="Title"
-        value={title}
-        onChange={(e) => setTitle(e.target.value)}
-        style={{ marginBottom: '10px' }}
-      />
-      <Input.TextArea
-        placeholder="Description"
-        value={description}
-        onChange={(e) => setDescription(e.target.value)}
-        rows={4}
-        style={{ marginBottom: '10px' }}
-      />
-      <Button
-        type="primary"
-        onClick={createTask}
-        disabled={!title.trim()}
-        style={{ marginBottom: '20px' }}
-      >
-        Create Task
-      </Button>
-      <List
-        dataSource={tasks}
-        renderItem={(task) => (
-          <List.Item
-            key={task.id}
-            actions={[
-              <Checkbox
-                checked={task.completed}
-                onChange={() => toggleCompletion(task.id, task.completed)}
-              >
-                Completed
-              </Checkbox>,
-              <Button
-                type="text"
-                icon={<DeleteOutlined />}
-                onClick={() => deleteTask(task.id)}
-              />,
-            ]}
-          >
-            <List.Item.Meta
-              title={task.title}
-              description={task.description}
-            />
-          </List.Item>
-        )}
-      />
-    </div>
+    <><h1 style={{textAlign:'center',marginBottom:100,marginTop:30}}>
+      Task Manager Web App
+    </h1><div style={{ marginTop: 700, border: '1px solid #ccc', borderRadius: 10, maxWidth: '600px', margin: '0 auto', padding: '20px' }}>
+        <Typography.Title level={2} style={{ color: '#1890ff' }}>
+          Task Manager
+        </Typography.Title>
+        <Input
+          placeholder="Title"
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
+          style={{ marginBottom: '10px' }} />
+        <Input.TextArea
+          placeholder="Description"
+          value={description}
+          onChange={(e) => setDescription(e.target.value)}
+          rows={4}
+          style={{ marginBottom: '10px' }} />
+        <Button
+          type="primary"
+          onClick={createTask}
+          disabled={!title.trim()}
+          style={{ marginBottom: '20px', backgroundColor: '#1890ff', borderColor: '#1890ff' }}
+        >
+          Create Task
+        </Button>
+        <List
+          dataSource={tasks}
+          renderItem={(task) => (
+            <List.Item
+              key={task.id}
+              actions={[
+                <Checkbox
+                  checked={task.completed}
+                  onChange={() => toggleCompletion(task.id, task.completed)}
+                  style={{ color: task.completed ? '#52c41a' : '#1890ff' }}
+                >
+                  Completed
+                </Checkbox>,
+                <Button
+                  type="text"
+                  icon={<DeleteOutlined />}
+                  onClick={() => deleteTask(task.id)}
+                  style={{ color: '#ff4d4f' }} />,
+              ]}
+              style={task.completed ? { textDecoration: 'line-through' } : {}}
+            >
+              <List.Item.Meta
+                title={<span style={{ color: task.completed ? '#52c41a' : '#000000' }}>{task.title}</span>}
+                description={task.description} />
+            </List.Item>
+          )} />
+      </div></>
   );
 }
 
