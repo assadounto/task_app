@@ -21,7 +21,8 @@ function App() {
     }
   };
 
-  const createTask = async () => {
+  const createTask = async (e) => {
+     e.preventDefault()
     try {
       const response = await axios.post(API_BASE_URL, {
         title,
@@ -52,7 +53,8 @@ function App() {
           type="text"
           placeholder="Title"
           value={title}
-          onChange={(e) => setTitle(e.target.value)}
+          onChange={(e) => 
+             setTitle(e.target.value)}
         />
         <input
           type="text"

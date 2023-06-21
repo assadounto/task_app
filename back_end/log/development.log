@@ -142,3 +142,800 @@ Processing by TasksController#index as HTML
 Completed 200 OK in 14ms (Views: 4.2ms | ActiveRecord: 3.3ms | Allocations: 1970)
 
 
+Started GET "/tasks" for ::1 at 2023-06-21 20:18:24 +0000
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:6:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.6ms | Allocations: 746)
+
+
+Started GET "/tasks" for ::1 at 2023-06-21 20:18:24 +0000
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:6:in `index'
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.2ms | Allocations: 727)
+
+
+Started OPTIONS "/tasks" for ::1 at 2023-06-21 20:18:33 +0000
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/tasks"):
+  
+Started GET "/tasks" for ::1 at 2023-06-21 20:18:33 +0000
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:6:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.4ms | Allocations: 739)
+
+
+Started GET "/tasks" for ::1 at 2023-06-21 20:18:33 +0000
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:6:in `index'
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.2ms | Allocations: 727)
+
+
+Started GET "/tasks" for ::1 at 2023-06-21 20:18:38 +0000
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:6:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.3ms | Allocations: 727)
+
+
+Started GET "/tasks" for ::1 at 2023-06-21 20:18:38 +0000
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:6:in `index'
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.2ms | Allocations: 727)
+
+
+Started GET "/tasks" for ::1 at 2023-06-21 20:18:40 +0000
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:6:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.3ms | Allocations: 740)
+
+
+Started GET "/tasks" for ::1 at 2023-06-21 20:18:40 +0000
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (10.9ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:6:in `index'
+Completed 200 OK in 14ms (Views: 2.1ms | ActiveRecord: 10.9ms | Allocations: 727)
+
+
+Started GET "/tasks" for ::1 at 2023-06-21 20:18:41 +0000
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:6:in `index'
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.6ms | Allocations: 727)
+
+
+Started GET "/tasks" for ::1 at 2023-06-21 20:18:41 +0000
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:6:in `index'
+Completed 200 OK in 5ms (Views: 2.9ms | ActiveRecord: 0.6ms | Allocations: 727)
+
+
+Started GET "/tasks" for ::1 at 2023-06-21 20:18:41 +0000
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (2.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:6:in `index'
+Completed 200 OK in 5ms (Views: 1.7ms | ActiveRecord: 2.3ms | Allocations: 727)
+
+
+Started GET "/tasks" for ::1 at 2023-06-21 20:18:41 +0000
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:6:in `index'
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.3ms | Allocations: 727)
+
+
+Started GET "/tasks" for ::1 at 2023-06-21 20:19:30 +0000
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:6:in `index'
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.2ms | Allocations: 727)
+
+
+Started GET "/tasks" for ::1 at 2023-06-21 20:19:56 +0000
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (1.0ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:6:in `index'
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 1.0ms | Allocations: 727)
+
+
+Started GET "/tasks" for ::1 at 2023-06-21 20:20:09 +0000
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:6:in `index'
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.3ms | Allocations: 727)
+
+
+Started GET "/tasks" for ::1 at 2023-06-21 20:20:11 +0000
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:6:in `index'
+Completed 200 OK in 8ms (Views: 7.6ms | ActiveRecord: 0.3ms | Allocations: 727)
+
+
+Started GET "/tasks" for ::1 at 2023-06-21 20:20:24 +0000
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:6:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.2ms | Allocations: 727)
+
+
+Started GET "/tasks" for ::1 at 2023-06-21 20:20:24 +0000
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:6:in `index'
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.3ms | Allocations: 727)
+
+
+Started GET "/tasks" for ::1 at 2023-06-21 20:20:30 +0000
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:6:in `index'
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.3ms | Allocations: 727)
+
+
+Started GET "/tasks" for ::1 at 2023-06-21 20:20:30 +0000
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:6:in `index'
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.2ms | Allocations: 727)
+
+
+Started GET "/tasks" for ::1 at 2023-06-21 20:20:36 +0000
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:6:in `index'
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.5ms | Allocations: 727)
+
+
+Started GET "/tasks" for ::1 at 2023-06-21 20:20:36 +0000
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.9ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:6:in `index'
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.9ms | Allocations: 727)
+
+
+Started GET "/tasks" for ::1 at 2023-06-21 20:20:47 +0000
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:6:in `index'
+Completed 200 OK in 26ms (Views: 21.8ms | ActiveRecord: 0.5ms | Allocations: 728)
+
+
+Started GET "/tasks" for ::1 at 2023-06-21 20:20:53 +0000
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:6:in `index'
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.4ms | Allocations: 727)
+
+
+Started GET "/tasks" for ::1 at 2023-06-21 20:20:54 +0000
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:6:in `index'
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.5ms | Allocations: 727)
+
+
+Started OPTIONS "/tasks" for ::1 at 2023-06-21 20:20:59 +0000
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/tasks"):
+  
+Started OPTIONS "/tasks" for ::1 at 2023-06-21 20:22:57 +0000
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/tasks"):
+  
+Started OPTIONS "/tasks" for ::1 at 2023-06-21 20:22:58 +0000
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/tasks"):
+  
+Started OPTIONS "/tasks" for ::1 at 2023-06-21 20:29:26 +0000
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/tasks"):
+  
+Started OPTIONS "/tasks" for ::1 at 2023-06-21 20:29:39 +0000
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/tasks"):
+  
+Started OPTIONS "/tasks" for ::1 at 2023-06-21 20:29:39 +0000
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/tasks"):
+  
+Started OPTIONS "/tasks" for ::1 at 2023-06-21 20:29:52 +0000
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/tasks"):
+  
+Started OPTIONS "/tasks" for ::1 at 2023-06-21 20:29:53 +0000
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/tasks"):
+  
+Started OPTIONS "/tasks" for ::1 at 2023-06-21 20:29:53 +0000
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/tasks"):
+  
+Started OPTIONS "/tasks" for ::1 at 2023-06-21 20:29:54 +0000
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/tasks"):
+  
+Started OPTIONS "/tasks" for ::1 at 2023-06-21 20:29:54 +0000
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/tasks"):
+  
+Started GET "/tasks" for ::1 at 2023-06-21 20:30:20 +0000
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (1.0ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:6:in `index'
+Completed 200 OK in 111ms (Views: 105.5ms | ActiveRecord: 92.3ms | Allocations: 4718)
+
+
+Started GET "/tasks" for ::1 at 2023-06-21 20:30:23 +0000
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:6:in `index'
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.2ms | Allocations: 737)
+
+
+Started GET "/tasks" for ::1 at 2023-06-21 20:30:26 +0000
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:6:in `index'
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.3ms | Allocations: 727)
+
+
+Started OPTIONS "/tasks/create" for ::1 at 2023-06-21 20:30:48 +0000
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/tasks/create"):
+  
+Started GET "/tasks" for ::1 at 2023-06-21 20:33:45 +0000
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:6:in `index'
+Completed 200 OK in 6ms (Views: 2.0ms | ActiveRecord: 0.3ms | Allocations: 1721)
+
+
+Started GET "/tasks" for ::1 at 2023-06-21 20:33:47 +0000
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:6:in `index'
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.2ms | Allocations: 733)
+
+
+Started GET "/tasks" for ::1 at 2023-06-21 20:33:49 +0000
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:6:in `index'
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.2ms | Allocations: 727)
+
+
+Started GET "/tasks" for ::1 at 2023-06-21 20:33:52 +0000
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:6:in `index'
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.3ms | Allocations: 727)
+
+
+Started GET "/tasks" for ::1 at 2023-06-21 20:33:54 +0000
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:6:in `index'
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.2ms | Allocations: 727)
+
+
+Started OPTIONS "/tasks/new" for ::1 at 2023-06-21 20:34:18 +0000
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/tasks/new"):
+  
+Started OPTIONS "/tasks/new" for ::1 at 2023-06-21 20:36:08 +0000
+  
+AbstractController::ActionNotFound (The action 'handle_options_request' could not be found for ApplicationController):
+  
+actionpack (7.0.5) lib/abstract_controller/base.rb:146:in `process'
+actionview (7.0.5) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.5) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.5) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.5) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.5) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.5) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.5) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.5) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.5) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.7) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.7) lib/rack/etag.rb:27:in `call'
+rack (2.2.7) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.7) lib/rack/head.rb:12:in `call'
+actionpack (7.0.5) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.5) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.7) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.7) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.5) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.5) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.5) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.5) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.5) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.5) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.5) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.5) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.7) lib/rack/method_override.rb:24:in `call'
+rack (2.2.7) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.5) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.5) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.7) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.5) lib/rails/engine.rb:530:in `call'
+puma (5.6.6) lib/puma/configuration.rb:252:in `call'
+puma (5.6.6) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.6) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.6) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.6) lib/puma/server.rb:443:in `process_client'
+puma (5.6.6) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started OPTIONS "/tasks/new" for ::1 at 2023-06-21 20:37:36 +0000
+Processing by ApplicationController#handle_options_request as */*
+  Parameters: {"path"=>"tasks/new"}
+Completed 200 OK in 0ms (ActiveRecord: 0.0ms | Allocations: 119)
+
+
+Started OPTIONS "/tasks/new" for ::1 at 2023-06-21 20:37:48 +0000
+Processing by ApplicationController#handle_options_request as */*
+  Parameters: {"path"=>"tasks/new"}
+Completed 200 OK in 0ms (ActiveRecord: 0.0ms | Allocations: 49)
+
+
+Started GET "/tasks" for ::1 at 2023-06-21 20:38:07 +0000
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:6:in `index'
+Completed 200 OK in 4ms (Views: 1.5ms | ActiveRecord: 0.3ms | Allocations: 1654)
+
+
+Started OPTIONS "/tasks" for ::1 at 2023-06-21 20:38:15 +0000
+Processing by ApplicationController#handle_options_request as */*
+  Parameters: {"path"=>"tasks"}
+Completed 200 OK in 0ms (ActiveRecord: 0.0ms | Allocations: 54)
+
+
+Started OPTIONS "/tasks" for ::1 at 2023-06-21 20:38:19 +0000
+Processing by ApplicationController#handle_options_request as */*
+  Parameters: {"path"=>"tasks"}
+Completed 200 OK in 0ms (ActiveRecord: 0.0ms | Allocations: 49)
+
+
+Started OPTIONS "/tasks" for ::1 at 2023-06-21 20:38:19 +0000
+Processing by ApplicationController#handle_options_request as */*
+  Parameters: {"path"=>"tasks"}
+Completed 200 OK in 0ms (ActiveRecord: 0.0ms | Allocations: 49)
+
+
+Started OPTIONS "/tasks" for ::1 at 2023-06-21 20:38:20 +0000
+Processing by ApplicationController#handle_options_request as */*
+  Parameters: {"path"=>"tasks"}
+Completed 200 OK in 0ms (ActiveRecord: 0.0ms | Allocations: 49)
+
+
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+Started OPTIONS "/tasks" for ::1 at 2023-06-21 20:39:27 +0000
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/tasks"):
+  
+Started OPTIONS "/tasks" for ::1 at 2023-06-21 20:39:32 +0000
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/tasks"):
+  
+Started OPTIONS "/tasks" for ::1 at 2023-06-21 20:39:32 +0000
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/tasks"):
+  
+Started OPTIONS "/tasks" for ::1 at 2023-06-21 20:42:49 +0000
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/tasks"):
+  
+Started GET "/" for ::1 at 2023-06-21 20:43:09 +0000
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (uninitialized constant TaskController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  TasksController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/" for ::1 at 2023-06-21 20:43:21 +0000
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:6:in `index'
+Completed 200 OK in 16ms (Views: 12.0ms | ActiveRecord: 0.6ms | Allocations: 1904)
+
+
+Started GET "/tasks" for ::1 at 2023-06-21 20:43:33 +0000
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:6:in `index'
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.4ms | Allocations: 692)
+
+
+Started GET "/tasks" for ::1 at 2023-06-21 20:43:33 +0000
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (1.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:6:in `index'
+Completed 200 OK in 4ms (Views: 2.0ms | ActiveRecord: 1.5ms | Allocations: 676)
+
+
+Started OPTIONS "/tasks" for ::1 at 2023-06-21 20:43:40 +0000
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/tasks"):
+  
+Started OPTIONS "/tasks" for ::1 at 2023-06-21 20:48:00 +0000
+  
+ArgumentError (Missing :controller key on routes definition, please check your routes.):
+  
+config/routes.rb:7:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started OPTIONS "/tasks" for ::1 at 2023-06-21 20:48:51 +0000
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/tasks"):
+  
+Started OPTIONS "/tasks" for ::1 at 2023-06-21 20:48:55 +0000
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/tasks"):
+  
+Started OPTIONS "/tasks" for ::1 at 2023-06-21 20:49:15 +0000
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/tasks"):
+  
+Started OPTIONS "/tasks" for ::1 at 2023-06-21 20:49:16 +0000
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/tasks"):
+  
+Started OPTIONS "/tasks" for ::1 at 2023-06-21 20:49:16 +0000
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/tasks"):
+  
+Started OPTIONS "/tasks" for ::1 at 2023-06-21 20:49:17 +0000
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/tasks"):
+  
+Started OPTIONS "/tasks" for ::1 at 2023-06-21 20:49:18 +0000
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/tasks"):
+  
+Started OPTIONS "/tasks" for ::1 at 2023-06-21 20:49:26 +0000
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/tasks"):
+  
+Started OPTIONS "/tasks" for ::1 at 2023-06-21 20:49:27 +0000
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/tasks"):
+  
+Started OPTIONS "/tasks" for ::1 at 2023-06-21 20:49:27 +0000
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/tasks"):
+  
+Started OPTIONS "/tasks" for ::1 at 2023-06-21 20:49:37 +0000
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/tasks"):
+  
+Started OPTIONS "/tasks" for ::1 at 2023-06-21 20:49:38 +0000
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/tasks"):
+  
+Started OPTIONS "/tasks" for ::1 at 2023-06-21 20:49:38 +0000
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/tasks"):
+  
+Started OPTIONS "/tasks" for ::1 at 2023-06-21 20:49:39 +0000
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/tasks"):
+  
+Started OPTIONS "/tasks" for ::1 at 2023-06-21 20:49:39 +0000
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/tasks"):
+  
+Started OPTIONS "/tasks" for ::1 at 2023-06-21 20:49:39 +0000
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/tasks"):
+  
+Started OPTIONS "/tasks" for ::1 at 2023-06-21 20:49:40 +0000
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/tasks"):
+  
+Started OPTIONS "/tasks" for ::1 at 2023-06-21 20:49:56 +0000
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/tasks"):
+  
+Started OPTIONS "/tasks" for ::1 at 2023-06-21 20:49:56 +0000
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/tasks"):
+  
+Started OPTIONS "/tasks" for ::1 at 2023-06-21 20:49:57 +0000
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/tasks"):
+  
+Started OPTIONS "/tasks" for ::1 at 2023-06-21 20:49:57 +0000
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/tasks"):
+  
+Started OPTIONS "/tasks" for ::1 at 2023-06-21 20:49:57 +0000
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/tasks"):
+  
+Started OPTIONS "/tasks" for ::1 at 2023-06-21 20:49:57 +0000
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/tasks"):
+  
+Started OPTIONS "/tasks" for ::1 at 2023-06-21 20:49:57 +0000
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/tasks"):
+  
+Started OPTIONS "/tasks" for ::1 at 2023-06-21 20:49:58 +0000
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/tasks"):
+  
+Started OPTIONS "/tasks" for ::1 at 2023-06-21 20:49:58 +0000
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/tasks"):
+  
+Started OPTIONS "/tasks" for ::1 at 2023-06-21 20:49:58 +0000
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/tasks"):
+  
+Started OPTIONS "/tasks" for ::1 at 2023-06-21 20:49:58 +0000
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/tasks"):
+  
+Started OPTIONS "/tasks" for ::1 at 2023-06-21 20:49:59 +0000
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/tasks"):
+  
+Started GET "/tasks" for ::1 at 2023-06-21 20:50:31 +0000
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:9:in `index'
+Completed 200 OK in 8ms (Views: 2.3ms | ActiveRecord: 0.5ms | Allocations: 1618)
+
+
+Started GET "/tasks" for ::1 at 2023-06-21 20:50:31 +0000
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.2ms | Allocations: 677)
+
+
+Started GET "/tasks" for ::1 at 2023-06-21 20:50:32 +0000
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (1.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:9:in `index'
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 1.1ms | Allocations: 692)
+
+
+Started GET "/tasks" for ::1 at 2023-06-21 20:50:32 +0000
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (1.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 3.0ms | ActiveRecord: 1.3ms | Allocations: 676)
+
+
+Started GET "/tasks" for ::1 at 2023-06-21 20:50:33 +0000
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:9:in `index'
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.4ms | Allocations: 688)
+
+
+Started GET "/tasks" for ::1 at 2023-06-21 20:50:33 +0000
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.6ms | Allocations: 676)
+
+
+Started GET "/" for ::1 at 2023-06-21 20:51:35 +0000
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.2ms | Allocations: 676)
+
+
+Started GET "/" for ::1 at 2023-06-21 20:51:39 +0000
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.6ms | Allocations: 676)
+
+
+Started GET "/tasks" for ::1 at 2023-06-21 20:51:42 +0000
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.8ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.8ms | Allocations: 676)
+
+
+Started OPTIONS "/" for ::1 at 2023-06-21 20:51:45 +0000
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/"):
+  
+Started OPTIONS "/" for ::1 at 2023-06-21 20:51:46 +0000
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/"):
+  
+Started OPTIONS "/" for ::1 at 2023-06-21 20:51:46 +0000
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/"):
+  
+Started OPTIONS "/" for ::1 at 2023-06-21 20:55:33 +0000
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/"):
+  
+Started OPTIONS "/" for ::1 at 2023-06-21 20:55:34 +0000
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/"):
+  
+Started POST "/" for ::1 at 2023-06-21 20:56:56 +0000
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [POST] "/"):
+  
+Started GET "/tasks" for ::1 at 2023-06-21 20:57:45 +0000
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.9ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 2.0ms | ActiveRecord: 0.9ms | Allocations: 1919)
+
+
+Started POST "/tasks" for ::1 at 2023-06-21 20:58:09 +0000
+Processing by TasksController#create as HTML
+  Parameters: {"title"=>"jop", "description"=>"oi", "task"=>{"title"=>"jop", "description"=>"oi"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tasks_controller.rb:19:in `create'
+  [1m[36mTask Create (41.6ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "jop"], ["description", "oi"], ["created_at", "2023-06-21 20:58:09.177942"], ["updated_at", "2023-06-21 20:58:09.177942"]]
+  ↳ app/controllers/tasks_controller.rb:19:in `create'
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tasks_controller.rb:19:in `create'
+Completed 201 Created in 68ms (Views: 0.5ms | ActiveRecord: 55.3ms | Allocations: 7112)
+
+
+Started DELETE "/tasks/1" for ::1 at 2023-06-21 20:58:16 +0000
+Processing by TasksController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (39.8ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:41:in `set_task'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tasks_controller.rb:35:in `destroy'
+  [1m[36mTask Destroy (2.9ms)[0m  [1m[31mDELETE FROM "tasks" WHERE "tasks"."id" = $1[0m  [["id", 1]]
+  ↳ app/controllers/tasks_controller.rb:35:in `destroy'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tasks_controller.rb:35:in `destroy'
+No template found for TasksController#destroy, rendering head :no_content
+Completed 204 No Content in 65ms (ActiveRecord: 44.1ms | Allocations: 5976)
+
+
+Started POST "/tasks" for ::1 at 2023-06-21 20:58:18 +0000
+Processing by TasksController#create as HTML
+  Parameters: {"title"=>"", "description"=>"", "task"=>{"title"=>"", "description"=>""}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tasks_controller.rb:19:in `create'
+  [1m[36mTask Create (1.9ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", ""], ["description", ""], ["created_at", "2023-06-21 20:58:19.002536"], ["updated_at", "2023-06-21 20:58:19.002536"]]
+  ↳ app/controllers/tasks_controller.rb:19:in `create'
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tasks_controller.rb:19:in `create'
+Completed 201 Created in 9ms (Views: 0.4ms | ActiveRecord: 4.1ms | Allocations: 2042)
+
+
+Started DELETE "/tasks/2" for ::1 at 2023-06-21 20:58:21 +0000
+Processing by TasksController#destroy as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:41:in `set_task'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tasks_controller.rb:35:in `destroy'
+  [1m[36mTask Destroy (1.4ms)[0m  [1m[31mDELETE FROM "tasks" WHERE "tasks"."id" = $1[0m  [["id", 2]]
+  ↳ app/controllers/tasks_controller.rb:35:in `destroy'
+  [1m[36mTRANSACTION (7.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tasks_controller.rb:35:in `destroy'
+No template found for TasksController#destroy, rendering head :no_content
+Completed 204 No Content in 24ms (ActiveRecord: 9.9ms | Allocations: 2063)
+
+
+Started POST "/tasks" for ::1 at 2023-06-21 20:58:37 +0000
+Processing by TasksController#create as HTML
+  Parameters: {"title"=>"api", "description"=>"des", "task"=>{"title"=>"api", "description"=>"des"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tasks_controller.rb:19:in `create'
+  [1m[36mTask Create (1.6ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "api"], ["description", "des"], ["created_at", "2023-06-21 20:58:37.185199"], ["updated_at", "2023-06-21 20:58:37.185199"]]
+  ↳ app/controllers/tasks_controller.rb:19:in `create'
+  [1m[36mTRANSACTION (3.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tasks_controller.rb:19:in `create'
+Completed 201 Created in 10ms (Views: 0.3ms | ActiveRecord: 4.8ms | Allocations: 1922)
+
+
+Started POST "/tasks" for ::1 at 2023-06-21 20:58:46 +0000
+Processing by TasksController#create as HTML
+  Parameters: {"title"=>"ZXsd", "description"=>"sDsd", "task"=>{"title"=>"ZXsd", "description"=>"sDsd"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tasks_controller.rb:19:in `create'
+  [1m[36mTask Create (1.0ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "ZXsd"], ["description", "sDsd"], ["created_at", "2023-06-21 20:58:46.070180"], ["updated_at", "2023-06-21 20:58:46.070180"]]
+  ↳ app/controllers/tasks_controller.rb:19:in `create'
+  [1m[36mTRANSACTION (6.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tasks_controller.rb:19:in `create'
+Completed 201 Created in 12ms (Views: 0.3ms | ActiveRecord: 7.3ms | Allocations: 1918)
+
+
+Started POST "/tasks" for ::1 at 2023-06-21 20:58:50 +0000
+Processing by TasksController#create as HTML
+  Parameters: {"title"=>"SDs", "description"=>"sDS", "task"=>{"title"=>"SDs", "description"=>"sDS"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tasks_controller.rb:19:in `create'
+  [1m[36mTask Create (0.7ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "SDs"], ["description", "sDS"], ["created_at", "2023-06-21 20:58:50.750555"], ["updated_at", "2023-06-21 20:58:50.750555"]]
+  ↳ app/controllers/tasks_controller.rb:19:in `create'
+  [1m[36mTRANSACTION (3.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tasks_controller.rb:19:in `create'
+Completed 201 Created in 9ms (Views: 0.4ms | ActiveRecord: 4.1ms | Allocations: 1920)
+
+
+Started DELETE "/tasks/3" for ::1 at 2023-06-21 20:58:52 +0000
+Processing by TasksController#destroy as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTask Load (0.7ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:41:in `set_task'
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tasks_controller.rb:35:in `destroy'
+  [1m[36mTask Destroy (0.6ms)[0m  [1m[31mDELETE FROM "tasks" WHERE "tasks"."id" = $1[0m  [["id", 3]]
+  ↳ app/controllers/tasks_controller.rb:35:in `destroy'
+  [1m[36mTRANSACTION (41.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tasks_controller.rb:35:in `destroy'
+No template found for TasksController#destroy, rendering head :no_content
+Completed 204 No Content in 49ms (ActiveRecord: 44.2ms | Allocations: 2066)
+
+
+Started DELETE "/tasks/4" for ::1 at 2023-06-21 20:58:53 +0000
+Processing by TasksController#destroy as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTask Load (0.7ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:41:in `set_task'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tasks_controller.rb:35:in `destroy'
+  [1m[36mTask Destroy (7.6ms)[0m  [1m[31mDELETE FROM "tasks" WHERE "tasks"."id" = $1[0m  [["id", 4]]
+  ↳ app/controllers/tasks_controller.rb:35:in `destroy'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tasks_controller.rb:35:in `destroy'
+No template found for TasksController#destroy, rendering head :no_content
+Completed 204 No Content in 15ms (ActiveRecord: 9.7ms | Allocations: 2060)
+
+
+Started DELETE "/tasks/5" for ::1 at 2023-06-21 20:58:54 +0000
+Processing by TasksController#destroy as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mTask Load (1.0ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:41:in `set_task'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tasks_controller.rb:35:in `destroy'
+  [1m[36mTask Destroy (0.4ms)[0m  [1m[31mDELETE FROM "tasks" WHERE "tasks"."id" = $1[0m  [["id", 5]]
+  ↳ app/controllers/tasks_controller.rb:35:in `destroy'
+  [1m[36mTRANSACTION (40.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tasks_controller.rb:35:in `destroy'
+No template found for TasksController#destroy, rendering head :no_content
+Completed 204 No Content in 50ms (ActiveRecord: 42.7ms | Allocations: 2062)
+
+
