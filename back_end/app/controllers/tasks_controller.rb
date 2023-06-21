@@ -30,7 +30,14 @@ class TasksController < ApplicationController
         render json: @task.errors, status: :unprocessable_entity
       end
     end
-  
+    
+    def complete
+        task = Task.find(params[:id])
+        task.update(completed: !task.completed)
+        render json: task
+      end
+    
+
     def destroy
       @task.destroy
     end
@@ -42,7 +49,7 @@ class TasksController < ApplicationController
     end
   
     def task_params
-      params.require(:task).permit(:title, :description)
+      params.require(:task).permit(:title, :description,:completed)
     end
   end
   

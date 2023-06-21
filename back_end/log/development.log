@@ -939,3 +939,716 @@ No template found for TasksController#destroy, rendering head :no_content
 Completed 204 No Content in 50ms (ActiveRecord: 42.7ms | Allocations: 2062)
 
 
+Started GET "/tasks" for ::1 at 2023-06-21 21:07:53 +0000
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (1.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:9:in `index'
+Completed 200 OK in 105ms (Views: 105.3ms | ActiveRecord: 13.8ms | Allocations: 3680)
+
+
+Started GET "/tasks" for ::1 at 2023-06-21 21:07:54 +0000
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.5ms | Allocations: 677)
+
+
+Started POST "/tasks" for ::1 at 2023-06-21 21:08:29 +0000
+Processing by TasksController#create as HTML
+  Parameters: {"title"=>"read", "description"=>"aaaaaa", "task"=>{"title"=>"read", "description"=>"aaaaaa"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tasks_controller.rb:19:in `create'
+  [1m[36mTask Create (1.1ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "read"], ["description", "aaaaaa"], ["created_at", "2023-06-21 21:08:29.083660"], ["updated_at", "2023-06-21 21:08:29.083660"]]
+  ↳ app/controllers/tasks_controller.rb:19:in `create'
+  [1m[36mTRANSACTION (81.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tasks_controller.rb:19:in `create'
+Completed 201 Created in 88ms (Views: 0.3ms | ActiveRecord: 83.0ms | Allocations: 1919)
+
+
+Started DELETE "/tasks/6" for ::1 at 2023-06-21 21:08:33 +0000
+Processing by TasksController#destroy as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:41:in `set_task'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tasks_controller.rb:35:in `destroy'
+  [1m[36mTask Destroy (0.6ms)[0m  [1m[31mDELETE FROM "tasks" WHERE "tasks"."id" = $1[0m  [["id", 6]]
+  ↳ app/controllers/tasks_controller.rb:35:in `destroy'
+  [1m[36mTRANSACTION (5.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tasks_controller.rb:35:in `destroy'
+No template found for TasksController#destroy, rendering head :no_content
+Completed 204 No Content in 13ms (ActiveRecord: 8.3ms | Allocations: 2088)
+
+
+Started POST "/tasks" for ::1 at 2023-06-21 21:08:42 +0000
+Processing by TasksController#create as HTML
+  Parameters: {"title"=>"read", "description"=>"read", "task"=>{"title"=>"read", "description"=>"read"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tasks_controller.rb:19:in `create'
+  [1m[36mTask Create (1.2ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "read"], ["description", "read"], ["created_at", "2023-06-21 21:08:42.948196"], ["updated_at", "2023-06-21 21:08:42.948196"]]
+  ↳ app/controllers/tasks_controller.rb:19:in `create'
+  [1m[36mTRANSACTION (40.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tasks_controller.rb:19:in `create'
+Completed 201 Created in 47ms (Views: 0.3ms | ActiveRecord: 41.7ms | Allocations: 1918)
+
+
+  [1m[35m (10.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7692156217679140725)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddCompletedToTasks (20230621211415)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (32.6ms)[0m  [1m[35mALTER TABLE "tasks" ADD "completed" boolean DEFAULT FALSE[0m
+  [1m[36mActiveRecord::SchemaMigration Create (40.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230621211415"]]
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(7692156217679140725)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/tasks" for ::1 at 2023-06-21 21:17:37 +0000
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.9ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:9:in `index'
+Completed 200 OK in 10ms (Views: 4.9ms | ActiveRecord: 0.9ms | Allocations: 3191)
+
+
+Started GET "/tasks" for ::1 at 2023-06-21 21:18:27 +0000
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.2ms | Allocations: 792)
+
+
+Started GET "/tasks" for ::1 at 2023-06-21 21:18:37 +0000
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (1.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 1.2ms | Allocations: 790)
+
+
+Started GET "/tasks" for ::1 at 2023-06-21 21:18:37 +0000
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (2.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 2.6ms | ActiveRecord: 2.1ms | Allocations: 790)
+
+
+Started PUT "/tasks/7" for ::1 at 2023-06-21 21:18:39 +0000
+Processing by TasksController#update as HTML
+  Parameters: {"completed"=>true, "id"=>"7", "task"=>{}}
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:48:in `set_task'
+Completed 400 Bad Request in 4ms (ActiveRecord: 1.0ms | Allocations: 1607)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: task):
+  
+app/controllers/tasks_controller.rb:52:in `task_params'
+app/controllers/tasks_controller.rb:27:in `update'
+Started PUT "/tasks/7" for ::1 at 2023-06-21 21:18:41 +0000
+Processing by TasksController#update as HTML
+  Parameters: {"completed"=>true, "id"=>"7", "task"=>{}}
+  [1m[36mTask Load (0.7ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:48:in `set_task'
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.7ms | Allocations: 942)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: task):
+  
+app/controllers/tasks_controller.rb:52:in `task_params'
+app/controllers/tasks_controller.rb:27:in `update'
+Started PUT "/tasks/7" for ::1 at 2023-06-21 21:18:41 +0000
+Processing by TasksController#update as HTML
+  Parameters: {"completed"=>true, "id"=>"7", "task"=>{}}
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:48:in `set_task'
+Completed 400 Bad Request in 3ms (ActiveRecord: 0.5ms | Allocations: 943)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: task):
+  
+app/controllers/tasks_controller.rb:52:in `task_params'
+app/controllers/tasks_controller.rb:27:in `update'
+Started PUT "/tasks/7" for ::1 at 2023-06-21 21:18:41 +0000
+Processing by TasksController#update as HTML
+  Parameters: {"completed"=>true, "id"=>"7", "task"=>{}}
+  [1m[36mTask Load (1.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:48:in `set_task'
+Completed 400 Bad Request in 4ms (ActiveRecord: 1.3ms | Allocations: 940)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: task):
+  
+app/controllers/tasks_controller.rb:52:in `task_params'
+app/controllers/tasks_controller.rb:27:in `update'
+Started POST "/tasks" for ::1 at 2023-06-21 21:18:47 +0000
+Processing by TasksController#create as HTML
+  Parameters: {"title"=>"jkn", "description"=>"jkl", "completed"=>false, "task"=>{"title"=>"jkn", "description"=>"jkl"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tasks_controller.rb:19:in `create'
+  [1m[36mTask Create (1.0ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "jkn"], ["description", "jkl"], ["created_at", "2023-06-21 21:18:47.483715"], ["updated_at", "2023-06-21 21:18:47.483715"]]
+  ↳ app/controllers/tasks_controller.rb:19:in `create'
+  [1m[36mTRANSACTION (6.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tasks_controller.rb:19:in `create'
+Completed 201 Created in 13ms (Views: 0.3ms | ActiveRecord: 7.6ms | Allocations: 2074)
+
+
+Started PUT "/tasks/8" for ::1 at 2023-06-21 21:18:49 +0000
+Processing by TasksController#update as HTML
+  Parameters: {"completed"=>true, "id"=>"8", "task"=>{}}
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:48:in `set_task'
+Completed 400 Bad Request in 6ms (ActiveRecord: 0.4ms | Allocations: 943)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: task):
+  
+app/controllers/tasks_controller.rb:52:in `task_params'
+app/controllers/tasks_controller.rb:27:in `update'
+Started PUT "/tasks/7" for ::1 at 2023-06-21 21:18:50 +0000
+Processing by TasksController#update as HTML
+  Parameters: {"completed"=>true, "id"=>"7", "task"=>{}}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:48:in `set_task'
+Completed 400 Bad Request in 3ms (ActiveRecord: 0.3ms | Allocations: 942)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: task):
+  
+app/controllers/tasks_controller.rb:52:in `task_params'
+app/controllers/tasks_controller.rb:27:in `update'
+Started PUT "/tasks/7" for ::1 at 2023-06-21 21:18:51 +0000
+Processing by TasksController#update as HTML
+  Parameters: {"completed"=>true, "id"=>"7", "task"=>{}}
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:48:in `set_task'
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.6ms | Allocations: 942)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: task):
+  
+app/controllers/tasks_controller.rb:52:in `task_params'
+app/controllers/tasks_controller.rb:27:in `update'
+Started PUT "/tasks/7" for ::1 at 2023-06-21 21:18:51 +0000
+Processing by TasksController#update as HTML
+  Parameters: {"completed"=>true, "id"=>"7", "task"=>{}}
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:48:in `set_task'
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.5ms | Allocations: 940)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: task):
+  
+app/controllers/tasks_controller.rb:52:in `task_params'
+app/controllers/tasks_controller.rb:27:in `update'
+Started PUT "/tasks/7" for ::1 at 2023-06-21 21:18:51 +0000
+Processing by TasksController#update as HTML
+  Parameters: {"completed"=>true, "id"=>"7", "task"=>{}}
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:48:in `set_task'
+Completed 400 Bad Request in 4ms (ActiveRecord: 0.6ms | Allocations: 940)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: task):
+  
+app/controllers/tasks_controller.rb:52:in `task_params'
+app/controllers/tasks_controller.rb:27:in `update'
+Started GET "/tasks" for ::1 at 2023-06-21 21:18:53 +0000
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.8ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:9:in `index'
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.8ms | Allocations: 893)
+
+
+Started GET "/tasks" for ::1 at 2023-06-21 21:18:53 +0000
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.4ms | Allocations: 893)
+
+
+Started PUT "/tasks/7" for ::1 at 2023-06-21 21:18:55 +0000
+Processing by TasksController#update as HTML
+  Parameters: {"completed"=>true, "id"=>"7", "task"=>{}}
+  [1m[36mTask Load (0.9ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:48:in `set_task'
+Completed 400 Bad Request in 3ms (ActiveRecord: 0.9ms | Allocations: 942)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: task):
+  
+app/controllers/tasks_controller.rb:52:in `task_params'
+app/controllers/tasks_controller.rb:27:in `update'
+Started PUT "/tasks/7" for ::1 at 2023-06-21 21:18:55 +0000
+Processing by TasksController#update as HTML
+  Parameters: {"completed"=>true, "id"=>"7", "task"=>{}}
+  [1m[36mTask Load (0.7ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:48:in `set_task'
+Completed 400 Bad Request in 3ms (ActiveRecord: 0.7ms | Allocations: 940)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: task):
+  
+app/controllers/tasks_controller.rb:52:in `task_params'
+app/controllers/tasks_controller.rb:27:in `update'
+Started PUT "/tasks/7" for ::1 at 2023-06-21 21:18:55 +0000
+Processing by TasksController#update as HTML
+  Parameters: {"completed"=>true, "id"=>"7", "task"=>{}}
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:48:in `set_task'
+Completed 400 Bad Request in 3ms (ActiveRecord: 0.6ms | Allocations: 940)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: task):
+  
+app/controllers/tasks_controller.rb:52:in `task_params'
+app/controllers/tasks_controller.rb:27:in `update'
+Started PUT "/tasks/7" for ::1 at 2023-06-21 21:18:55 +0000
+Processing by TasksController#update as HTML
+  Parameters: {"completed"=>true, "id"=>"7", "task"=>{}}
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:48:in `set_task'
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.5ms | Allocations: 940)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: task):
+  
+app/controllers/tasks_controller.rb:52:in `task_params'
+app/controllers/tasks_controller.rb:27:in `update'
+Started PUT "/tasks/7" for ::1 at 2023-06-21 21:18:56 +0000
+Processing by TasksController#update as HTML
+  Parameters: {"completed"=>true, "id"=>"7", "task"=>{}}
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:48:in `set_task'
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.6ms | Allocations: 940)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: task):
+  
+app/controllers/tasks_controller.rb:52:in `task_params'
+app/controllers/tasks_controller.rb:27:in `update'
+Started PUT "/tasks/7" for ::1 at 2023-06-21 21:18:56 +0000
+Processing by TasksController#update as HTML
+  Parameters: {"completed"=>true, "id"=>"7", "task"=>{}}
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:48:in `set_task'
+Completed 400 Bad Request in 3ms (ActiveRecord: 0.5ms | Allocations: 942)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: task):
+  
+app/controllers/tasks_controller.rb:52:in `task_params'
+app/controllers/tasks_controller.rb:27:in `update'
+Started PUT "/tasks/7" for ::1 at 2023-06-21 21:18:56 +0000
+Processing by TasksController#update as HTML
+  Parameters: {"completed"=>true, "id"=>"7", "task"=>{}}
+  [1m[36mTask Load (0.7ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:48:in `set_task'
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.7ms | Allocations: 940)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: task):
+  
+app/controllers/tasks_controller.rb:52:in `task_params'
+app/controllers/tasks_controller.rb:27:in `update'
+Started GET "/tasks" for ::1 at 2023-06-21 21:20:20 +0000
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (1.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:9:in `index'
+Completed 200 OK in 6ms (Views: 4.3ms | ActiveRecord: 1.1ms | Allocations: 893)
+
+
+Started GET "/tasks" for ::1 at 2023-06-21 21:20:20 +0000
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.3ms | Allocations: 893)
+
+
+Started GET "/tasks" for ::1 at 2023-06-21 21:20:21 +0000
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:9:in `index'
+Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.4ms | Allocations: 893)
+
+
+Started GET "/tasks" for ::1 at 2023-06-21 21:20:21 +0000
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.3ms | Allocations: 893)
+
+
+Started PUT "/tasks/7" for ::1 at 2023-06-21 21:20:32 +0000
+Processing by TasksController#update as HTML
+  Parameters: {"completed"=>true, "id"=>"7", "task"=>{}}
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:48:in `set_task'
+Completed 400 Bad Request in 3ms (ActiveRecord: 0.5ms | Allocations: 942)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: task):
+  
+app/controllers/tasks_controller.rb:52:in `task_params'
+app/controllers/tasks_controller.rb:27:in `update'
+Started PUT "/tasks/7" for ::1 at 2023-06-21 21:22:47 +0000
+Processing by TasksController#update as HTML
+  Parameters: {"completed"=>true, "id"=>"7", "task"=>{"completed"=>true}}
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:48:in `set_task'
+[31mUnpermitted parameter: :completed. Context: { controller: TasksController, action: update, request: #<ActionDispatch::Request:0x000000010f4ceea0>, params: {"completed"=>true, "controller"=>"tasks", "action"=>"update", "id"=>"7", "task"=>{"completed"=>true}} }[0m
+Completed 200 OK in 52ms (Views: 0.3ms | ActiveRecord: 54.7ms | Allocations: 4055)
+
+
+Started PUT "/tasks/7" for ::1 at 2023-06-21 21:22:47 +0000
+Processing by TasksController#update as HTML
+  Parameters: {"completed"=>false, "id"=>"7", "task"=>{"completed"=>false}}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:48:in `set_task'
+[31mUnpermitted parameter: :completed. Context: { controller: TasksController, action: update, request: #<ActionDispatch::Request:0x000000010fc88ba0>, params: {"completed"=>false, "controller"=>"tasks", "action"=>"update", "id"=>"7", "task"=>{"completed"=>false}} }[0m
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 829)
+
+
+Started PUT "/tasks/7" for ::1 at 2023-06-21 21:22:48 +0000
+Processing by TasksController#update as HTML
+  Parameters: {"completed"=>true, "id"=>"7", "task"=>{"completed"=>true}}
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:48:in `set_task'
+[31mUnpermitted parameter: :completed. Context: { controller: TasksController, action: update, request: #<ActionDispatch::Request:0x000000010fce1458>, params: {"completed"=>true, "controller"=>"tasks", "action"=>"update", "id"=>"7", "task"=>{"completed"=>true}} }[0m
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 828)
+
+
+Started PUT "/tasks/7" for ::1 at 2023-06-21 21:22:50 +0000
+Processing by TasksController#update as HTML
+  Parameters: {"completed"=>false, "id"=>"7", "task"=>{"completed"=>false}}
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:48:in `set_task'
+[31mUnpermitted parameter: :completed. Context: { controller: TasksController, action: update, request: #<ActionDispatch::Request:0x000000010fd38500>, params: {"completed"=>false, "controller"=>"tasks", "action"=>"update", "id"=>"7", "task"=>{"completed"=>false}} }[0m
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 828)
+
+
+Started PUT "/tasks/8" for ::1 at 2023-06-21 21:22:51 +0000
+Processing by TasksController#update as HTML
+  Parameters: {"completed"=>true, "id"=>"8", "task"=>{"completed"=>true}}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:48:in `set_task'
+[31mUnpermitted parameter: :completed. Context: { controller: TasksController, action: update, request: #<ActionDispatch::Request:0x000000010fd71148>, params: {"completed"=>true, "controller"=>"tasks", "action"=>"update", "id"=>"8", "task"=>{"completed"=>true}} }[0m
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 828)
+
+
+Started PUT "/tasks/8" for ::1 at 2023-06-21 21:22:52 +0000
+Processing by TasksController#update as HTML
+  Parameters: {"completed"=>false, "id"=>"8", "task"=>{"completed"=>false}}
+  [1m[36mTask Load (0.9ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:48:in `set_task'
+[31mUnpermitted parameter: :completed. Context: { controller: TasksController, action: update, request: #<ActionDispatch::Request:0x000000010fdb3688>, params: {"completed"=>false, "controller"=>"tasks", "action"=>"update", "id"=>"8", "task"=>{"completed"=>false}} }[0m
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.9ms | Allocations: 827)
+
+
+Started PUT "/tasks/8" for ::1 at 2023-06-21 21:22:52 +0000
+Processing by TasksController#update as HTML
+  Parameters: {"completed"=>true, "id"=>"8", "task"=>{"completed"=>true}}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:48:in `set_task'
+[31mUnpermitted parameter: :completed. Context: { controller: TasksController, action: update, request: #<ActionDispatch::Request:0x000000010fe020a8>, params: {"completed"=>true, "controller"=>"tasks", "action"=>"update", "id"=>"8", "task"=>{"completed"=>true}} }[0m
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 827)
+
+
+Started PUT "/tasks/8" for ::1 at 2023-06-21 21:22:53 +0000
+Processing by TasksController#update as HTML
+  Parameters: {"completed"=>false, "id"=>"8", "task"=>{"completed"=>false}}
+  [1m[36mTask Load (0.8ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:48:in `set_task'
+[31mUnpermitted parameter: :completed. Context: { controller: TasksController, action: update, request: #<ActionDispatch::Request:0x000000010fe4a3d0>, params: {"completed"=>false, "controller"=>"tasks", "action"=>"update", "id"=>"8", "task"=>{"completed"=>false}} }[0m
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.8ms | Allocations: 827)
+
+
+Started PUT "/tasks/7" for ::1 at 2023-06-21 21:22:55 +0000
+Processing by TasksController#update as HTML
+  Parameters: {"completed"=>true, "id"=>"7", "task"=>{"completed"=>true}}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:48:in `set_task'
+[31mUnpermitted parameter: :completed. Context: { controller: TasksController, action: update, request: #<ActionDispatch::Request:0x000000010fea2ee0>, params: {"completed"=>true, "controller"=>"tasks", "action"=>"update", "id"=>"7", "task"=>{"completed"=>true}} }[0m
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 827)
+
+
+Started GET "/tasks" for ::1 at 2023-06-21 21:23:05 +0000
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (22.7ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:9:in `index'
+Completed 200 OK in 85ms (Views: 61.8ms | ActiveRecord: 22.7ms | Allocations: 910)
+
+
+Started GET "/tasks" for ::1 at 2023-06-21 21:23:05 +0000
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (1.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:9:in `index'
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 1.1ms | Allocations: 877)
+
+
+Started GET "/tasks" for ::1 at 2023-06-21 21:23:07 +0000
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (1.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 1.2ms | Allocations: 878)
+
+
+Started GET "/tasks" for ::1 at 2023-06-21 21:23:07 +0000
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.7ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:9:in `index'
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.7ms | Allocations: 877)
+
+
+Started GET "/tasks" for ::1 at 2023-06-21 21:23:08 +0000
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (3.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:9:in `index'
+Completed 200 OK in 6ms (Views: 2.5ms | ActiveRecord: 3.2ms | Allocations: 877)
+
+
+Started GET "/tasks" for ::1 at 2023-06-21 21:23:08 +0000
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.4ms | Allocations: 877)
+
+
+Started GET "/tasks" for ::1 at 2023-06-21 21:23:09 +0000
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:9:in `index'
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.3ms | Allocations: 877)
+
+
+Started GET "/tasks" for ::1 at 2023-06-21 21:23:09 +0000
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.4ms | Allocations: 877)
+
+
+Started PUT "/tasks/7" for ::1 at 2023-06-21 21:23:11 +0000
+Processing by TasksController#update as HTML
+  Parameters: {"completed"=>true, "id"=>"7", "task"=>{"completed"=>true}}
+  [1m[36mTask Load (0.7ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:48:in `set_task'
+[31mUnpermitted parameter: :completed. Context: { controller: TasksController, action: update, request: #<ActionDispatch::Request:0x00000001101b9098>, params: {"completed"=>true, "controller"=>"tasks", "action"=>"update", "id"=>"7", "task"=>{"completed"=>true}} }[0m
+Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 0.7ms | Allocations: 825)
+
+
+Started GET "/tasks" for ::1 at 2023-06-21 21:23:13 +0000
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.3ms | Allocations: 879)
+
+
+Started GET "/tasks" for ::1 at 2023-06-21 21:23:13 +0000
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:9:in `index'
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.4ms | Allocations: 877)
+
+
+Started PUT "/tasks/7" for ::1 at 2023-06-21 21:23:26 +0000
+Processing by TasksController#update as HTML
+  Parameters: {"completed"=>true, "id"=>"7", "task"=>{"completed"=>true}}
+  [1m[36mTask Load (0.7ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:48:in `set_task'
+[31mUnpermitted parameter: :completed. Context: { controller: TasksController, action: update, request: #<ActionDispatch::Request:0x000000010ff02cc8>, params: {"completed"=>true, "controller"=>"tasks", "action"=>"update", "id"=>"7", "task"=>{"completed"=>true}} }[0m
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 0.7ms | Allocations: 825)
+
+
+  [1m[36mTask Load (0.7ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+Started PUT "/tasks/7" for ::1 at 2023-06-21 21:26:22 +0000
+Processing by TasksController#update as HTML
+  Parameters: {"completed"=>false, "id"=>"7", "task"=>{"completed"=>false}}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:48:in `set_task'
+Completed 200 OK in 7ms (Views: 0.3ms | ActiveRecord: 3.6ms | Allocations: 3100)
+
+
+Started PUT "/tasks/7" for ::1 at 2023-06-21 21:26:23 +0000
+Processing by TasksController#update as HTML
+  Parameters: {"completed"=>true, "id"=>"7", "task"=>{"completed"=>true}}
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:48:in `set_task'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tasks_controller.rb:27:in `update'
+  [1m[36mTask Update (0.7ms)[0m  [1m[33mUPDATE "tasks" SET "updated_at" = $1, "completed" = $2 WHERE "tasks"."id" = $3[0m  [["updated_at", "2023-06-21 21:26:23.908020"], ["completed", true], ["id", 7]]
+  ↳ app/controllers/tasks_controller.rb:27:in `update'
+  [1m[36mTRANSACTION (41.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tasks_controller.rb:27:in `update'
+Completed 200 OK in 48ms (Views: 0.3ms | ActiveRecord: 43.0ms | Allocations: 2552)
+
+
+Started PUT "/tasks/8" for ::1 at 2023-06-21 21:26:25 +0000
+Processing by TasksController#update as HTML
+  Parameters: {"completed"=>true, "id"=>"8", "task"=>{"completed"=>true}}
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:48:in `set_task'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tasks_controller.rb:27:in `update'
+  [1m[36mTask Update (0.5ms)[0m  [1m[33mUPDATE "tasks" SET "updated_at" = $1, "completed" = $2 WHERE "tasks"."id" = $3[0m  [["updated_at", "2023-06-21 21:26:25.072221"], ["completed", true], ["id", 8]]
+  ↳ app/controllers/tasks_controller.rb:27:in `update'
+  [1m[36mTRANSACTION (39.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tasks_controller.rb:27:in `update'
+Completed 200 OK in 46ms (Views: 0.6ms | ActiveRecord: 41.0ms | Allocations: 2424)
+
+
+Started GET "/tasks" for ::1 at 2023-06-21 21:26:27 +0000
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (1.0ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:9:in `index'
+Completed 200 OK in 7ms (Views: 5.4ms | ActiveRecord: 1.0ms | Allocations: 907)
+
+
+Started GET "/tasks" for ::1 at 2023-06-21 21:26:27 +0000
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.4ms | Allocations: 877)
+
+
+Started GET "/tasks" for ::1 at 2023-06-21 21:26:28 +0000
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:9:in `index'
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.5ms | Allocations: 877)
+
+
+Started GET "/tasks" for ::1 at 2023-06-21 21:26:28 +0000
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.4ms | Allocations: 877)
+
+
+Started GET "/tasks" for ::1 at 2023-06-21 21:26:29 +0000
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.6ms | Allocations: 877)
+
+
+Started GET "/tasks" for ::1 at 2023-06-21 21:26:29 +0000
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.5ms | Allocations: 878)
+
+
+Started GET "/tasks" for ::1 at 2023-06-21 21:26:29 +0000
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.3ms | Allocations: 877)
+
+
+Started GET "/tasks" for ::1 at 2023-06-21 21:26:29 +0000
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.3ms | Allocations: 877)
+
+
+Started GET "/tasks" for ::1 at 2023-06-21 21:26:30 +0000
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.4ms | Allocations: 877)
+
+
+Started GET "/tasks" for ::1 at 2023-06-21 21:26:30 +0000
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.5ms | Allocations: 877)
+
+
+Started PUT "/tasks/7" for ::1 at 2023-06-21 21:26:32 +0000
+Processing by TasksController#update as HTML
+  Parameters: {"completed"=>false, "id"=>"7", "task"=>{"completed"=>false}}
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:48:in `set_task'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tasks_controller.rb:27:in `update'
+  [1m[36mTask Update (0.6ms)[0m  [1m[33mUPDATE "tasks" SET "updated_at" = $1, "completed" = $2 WHERE "tasks"."id" = $3[0m  [["updated_at", "2023-06-21 21:26:32.437973"], ["completed", false], ["id", 7]]
+  ↳ app/controllers/tasks_controller.rb:27:in `update'
+  [1m[36mTRANSACTION (40.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tasks_controller.rb:27:in `update'
+Completed 200 OK in 47ms (Views: 0.3ms | ActiveRecord: 42.3ms | Allocations: 2426)
+
+
+Started PUT "/tasks/8" for ::1 at 2023-06-21 21:26:33 +0000
+Processing by TasksController#update as HTML
+  Parameters: {"completed"=>false, "id"=>"8", "task"=>{"completed"=>false}}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:48:in `set_task'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tasks_controller.rb:27:in `update'
+  [1m[36mTask Update (0.6ms)[0m  [1m[33mUPDATE "tasks" SET "updated_at" = $1, "completed" = $2 WHERE "tasks"."id" = $3[0m  [["updated_at", "2023-06-21 21:26:33.392715"], ["completed", false], ["id", 8]]
+  ↳ app/controllers/tasks_controller.rb:27:in `update'
+  [1m[36mTRANSACTION (6.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tasks_controller.rb:27:in `update'
+Completed 200 OK in 13ms (Views: 0.3ms | ActiveRecord: 7.2ms | Allocations: 2424)
+
+
+Started GET "/tasks" for ::1 at 2023-06-21 21:26:35 +0000
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.4ms | Allocations: 877)
+
+
+Started GET "/tasks" for ::1 at 2023-06-21 21:26:35 +0000
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.7ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.7ms | Allocations: 877)
+
+
+Started PUT "/tasks/7" for ::1 at 2023-06-21 21:26:36 +0000
+Processing by TasksController#update as HTML
+  Parameters: {"completed"=>true, "id"=>"7", "task"=>{"completed"=>true}}
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:48:in `set_task'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tasks_controller.rb:27:in `update'
+  [1m[36mTask Update (1.0ms)[0m  [1m[33mUPDATE "tasks" SET "updated_at" = $1, "completed" = $2 WHERE "tasks"."id" = $3[0m  [["updated_at", "2023-06-21 21:26:36.690903"], ["completed", true], ["id", 7]]
+  ↳ app/controllers/tasks_controller.rb:27:in `update'
+  [1m[36mTRANSACTION (6.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tasks_controller.rb:27:in `update'
+Completed 200 OK in 13ms (Views: 0.4ms | ActiveRecord: 7.6ms | Allocations: 2424)
+
+
+Started PUT "/tasks/8" for ::1 at 2023-06-21 21:26:37 +0000
+Processing by TasksController#update as HTML
+  Parameters: {"completed"=>true, "id"=>"8", "task"=>{"completed"=>true}}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:48:in `set_task'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tasks_controller.rb:27:in `update'
+  [1m[36mTask Update (0.7ms)[0m  [1m[33mUPDATE "tasks" SET "updated_at" = $1, "completed" = $2 WHERE "tasks"."id" = $3[0m  [["updated_at", "2023-06-21 21:26:37.726110"], ["completed", true], ["id", 8]]
+  ↳ app/controllers/tasks_controller.rb:27:in `update'
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tasks_controller.rb:27:in `update'
+Completed 200 OK in 11ms (Views: 0.3ms | ActiveRecord: 3.4ms | Allocations: 2424)
+
+

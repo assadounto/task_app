@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   root :to => 'tasks#index'
   # Defines the root path route ("/")
   # root "articles#index"
-  resources :tasks
-get '/tasks', to: "tasks#unproces"
+  resources :tasks, except: [:new, :edit] do
+    patch 'complete', on: :member
+  end
+  
 end
