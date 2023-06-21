@@ -93,3 +93,52 @@ Migrating to CreateTasks (20230621194401)
   [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
   [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(7692156217679140725)[0m
   [1m[36mActiveRecord::SchemaMigration Pluck (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2023-06-21 20:14:14 +0000
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/macpro/.rvm/gems/ruby-3.1.2/gems/railties-7.0.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/macpro/.rvm/gems/ruby-3.1.2/gems/railties-7.0.5/lib/rails/templates/rails/welcome/index.html.erb (Duration: 2.3ms | Allocations: 529)
+Completed 200 OK in 79ms (Views: 28.7ms | ActiveRecord: 0.0ms | Allocations: 4505)
+
+
+Started GET "/task" for ::1 at 2023-06-21 20:14:22 +0000
+  
+ActionController::RoutingError (uninitialized constant TaskController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  TasksController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/tasks" for ::1 at 2023-06-21 20:14:31 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/tasks"):
+  
+Started GET "/task" for ::1 at 2023-06-21 20:14:41 +0000
+  
+ActionController::RoutingError (uninitialized constant TaskController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  TasksController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/task" for ::1 at 2023-06-21 20:16:30 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/task"):
+  
+Started GET "/task" for ::1 at 2023-06-21 20:16:31 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/task"):
+  
+Started GET "/tasks" for ::1 at 2023-06-21 20:16:39 +0000
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (3.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:6:in `index'
+Completed 200 OK in 14ms (Views: 4.2ms | ActiveRecord: 3.3ms | Allocations: 1970)
+
+
