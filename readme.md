@@ -5,7 +5,7 @@ This is a web application for a simple task management system. The application a
 # ![screenshot](pic.png)
 
 
-### [Vdeo Link](https://www.loom.com/share/856b0ec40821421cae3c3f5e3b18b77f?sid=8ff4579b-7861-42a0-9365-7fc1e294b6e2)
+### [Video Link](https://www.loom.com/share/856b0ec40821421cae3c3f5e3b18b77f?sid=8ff4579b-7861-42a0-9365-7fc1e294b6e2)
 
 
 ## Features
